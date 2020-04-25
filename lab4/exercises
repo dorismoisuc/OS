@@ -1,0 +1,25 @@
+Laborator 4
+1.	grep:
+1.	Găsiți toate liniile care conțin cuvantul �cat� dintr-un fișier dat.
+•	grep cat file
+2.	Găsiți toate liniile care �ncep cu un cuv�nt cu prefixul �ing� dintr-un fișier dat.
+•	grep “^ing” file
+3.	Găsiți toate liniile cu număr impar de caractere dintr-un fișier dat.
+•	grep -v "^\(..\)*$" file
+4.	Extrageți cuvintele cu 3 consoane consecutive dintr-un text.
+•	grep -P '[bcdfghjklmnpqrstvwxyz]{3}' file
+
+
+2.	sed:
+1.	Prefixați fiecare linie dintr-un fișier cu �abc�.
+•	sed -I ‘s/^/abc/’ file
+2.	Inlocuiți fiecare linie goală dintr-un fișier cu �empty�.
+•	sed -i 's/^\s*$/empty/' file
+3.	Convertiți taburile �n 3 spații �ntr-un text dat.
+•	sed -i 's/\t/   /g' file
+
+
+
+3.	awk:
+1.	Sa se afiseze DOAR numele si prenumele utilizatorilor connectati la server
+•	awk ‘{print$5}’ passwd
